@@ -24,7 +24,7 @@ const Countdown = () => {
 
     <div className="card text-center">
 
-    <div className="card-footer text-body-secondary">
+    <div id='count' className="card-footer text-body-secondary">
       {countdown > 0 ? (
         <h5 className="card-title">{countdown} dias restantes até o início do recesso!</h5>
       ) : (

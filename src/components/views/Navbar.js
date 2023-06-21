@@ -50,11 +50,13 @@ const Navbar = () => {
                 <li><a className="dropdown-item" href="#">Atualizações Legais</a></li>
                 <li><a className="dropdown-item" href="#">Página de Ajuda/FAQ</a></li>
                 <li><a className="dropdown-item" href="#">Página do Perfil</a></li>
+                <li><a className="dropdown-item" href="#"><Link to="/" onClick={handleLogout} style={{ color: 'black', textDecoration: 'none' }}>Log-out</Link>
+</a></li>
+
               </ul>
             </li>
           </ul>
         </div>
-        <Link className="nav-link" to="/" onClick={handleLogout} style={{ color: 'black', textDecoration: 'none' }}>Log-out</Link>
       </div>          
     </nav>
   );
