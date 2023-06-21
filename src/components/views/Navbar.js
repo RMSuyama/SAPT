@@ -3,7 +3,7 @@ import firebase from '../../config/firebase';
 import 'firebase/auth';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import './navbar.css';
 
 
 

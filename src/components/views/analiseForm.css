@@ -9,4 +9,11 @@
 
 .card{
   padding: 1vw;
+  padding-bottom: 2vw;
+}
+
+#formEmpresa{
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 2vw;
 }

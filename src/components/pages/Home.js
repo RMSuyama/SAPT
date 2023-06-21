@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from '../views/Navbar';
+import Navbar from '../views/navbar';
 import Citacao from '../views/citacao';
 import Countdown from '../views/countdown';
-import Mailme from '../services/Mailme';
+import Mailme from '../services/mailme';
 
 const Home = () => {
   return (
@@ -10,7 +10,6 @@ const Home = () => {
       <Navbar />
       <Citacao />
       <Countdown />
-      <Mailme />
     </div>
   );
 }

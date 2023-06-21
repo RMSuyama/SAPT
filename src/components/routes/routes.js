@@ -5,7 +5,7 @@ import "firebase/auth";
 
 import Home from "../pages/Home";
 import Edital from "../pages/Edital";
-import Rotina from "../pages/Rotina";
+import Rotina from "../pages/Teses";
 import Resumos from "../pages/Resumos";
 import Login from "../pages/LoginTemplate";
 
