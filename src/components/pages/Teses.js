@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../views/navbar';
+import Navbar from '../views/Navbar';
 import Esquemaestudos from '../views/teses';
 const Usuario = () => {
     return (
