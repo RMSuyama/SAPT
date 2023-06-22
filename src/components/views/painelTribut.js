@@ -1,5 +1,9 @@
 import React from 'react';
-import '../views/painel.css';
+import '../views/painelTribut.css';
+import New from '../../static/img/file-earmark-plus-fill.svg';
+import Edit from '../../static/img/pencil-square.svg';
+import Search from '../../static/img/search.svg'
+
 
 
 const PainelTribut = () => {
@@ -8,7 +12,7 @@ const PainelTribut = () => {
       <div className="row row-cols-1 row-cols-md-2 g-4">
         <div className="col">
           <div className="card">
-            <img src="" className="img-thumbnail" alt="Imagem do serviço" />
+            <img src={Search} className="img-thumbnail" alt="Imagem do serviço" />
             <div className="card-body">
               <h5 className="card-title">Buscar Cliente</h5>
               <p className="card-text">
@@ -20,7 +24,7 @@ const PainelTribut = () => {
         </div>
         <div className="col">
           <div className="card">
-            <img src="" className="img-thumbnail"  alt="Imagem do serviço" />
+            <img src={New} className="img-thumbnail"  alt="Imagem do serviço" />
             <div className="card-body">
               <h5 className="card-title">Cadastrar Novo Cliente</h5>
               <p className="card-text">
@@ -32,7 +36,7 @@ const PainelTribut = () => {
         </div>
         <div className="col">
           <div className="card">
-            <img src="" className="img-thumbnail" alt="Imagem do serviço" />
+            <img src={Edit} className="img-thumbnail" alt="Imagem do serviço" />
             <div className="card-body">
               <h5 className="card-title">Retificação de Dados</h5>
               <p className="card-text">
