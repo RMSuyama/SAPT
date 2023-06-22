@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../views/teses.css'
 
 const BuscaTesesJuridicas = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -24,7 +25,7 @@ const BuscaTesesJuridicas = () => {
   }, [alertType, alertMessage]);
 
   return (
-<div class="card">
+<div id="pesquisas" class="card">
     <div className="container">
       {alertType && (
         <div className={`alert alert-${alertType}`} role="alert">

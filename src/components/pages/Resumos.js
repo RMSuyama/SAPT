@@ -6,7 +6,7 @@ const Resumos = () => {
     return (
         <div>
             <Navbar />
-            <ul className="list-group">
+            <ul id="modelo" className="list-group">
                 <li className="list-group-item"><a href="Parecer Jurídico.pdf" download>Parecer Jurídico</a></li>
                 <li className="list-group-item"><a href="Consulta Tributária.pdf" download>Consulta Tributária</a></li>
                 <li className="list-group-item"><a href="Defesa Administrativa.pdf" download>Defesa Administrativa</a></li>

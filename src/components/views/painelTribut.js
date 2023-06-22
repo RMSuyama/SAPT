@@ -8,7 +8,7 @@ import Search from '../../static/img/search.svg'
 
 const PainelTribut = () => {
   return (
-    <div className="card">
+    <div id="paineltributus" className="card">
       <div className="row row-cols-1 row-cols-md-2 g-4">
         <div className="col">
           <div className="card">

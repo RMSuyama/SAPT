@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../views/Navbar';
-import Analise from '../views/analiseForm';
 import PainelTribut from '../views/painelTribut';
 
 const Sobre = () => {
@@ -8,7 +7,6 @@ const Sobre = () => {
         <div>
             <Navbar />
             <PainelTribut />
-            <Analise />
             
         </div>
     );
