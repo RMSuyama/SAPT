@@ -1,7 +1,9 @@
 .SPRT{
   font-size: large;
   font-weight: bold;
-  padding-bottom: 10%;
+  align-self: center;
+  margin-top: 1vw;
+    
 }
 
 .cardLog {
@@ -17,25 +19,9 @@
     background-color: #f8f9fa;
     border-bottom: none;
   }
-  
-  .nav-tabs .nav-item {
-    margin-bottom: 10px;
-  }
-  
-  .nav-link.active {
-    font-weight: bold;
-  }
-  
-  .cardLog-body {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-control {
-    margin-bottom: 10px;
-  }
-  
+
   .btn {
     width: 100%;
+    margin-bottom: 1vw;
   }
   

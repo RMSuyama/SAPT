@@ -45,12 +45,11 @@ const Navbar = () => {
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Planejamento de Estudo</a></li>
                 <li><a className="dropdown-item" href="#">Estatísticas e Relatórios</a></li>
                 <li><a className="dropdown-item" href="#">Atualizações Legais</a></li>
                 <li><a className="dropdown-item" href="#">Página de Ajuda/FAQ</a></li>
                 <li><a className="dropdown-item" href="#">Página do Perfil</a></li>
-                <li><a className="dropdown-item" href="#"><Link to="/" onClick={handleLogout} style={{ color: 'black', textDecoration: 'none' }}>Log-out</Link>
+                <li><a className="dropdown-item"><Link to="/" onClick={handleLogout} style={{ color: 'black', textDecoration: 'none' }}>Log-out</Link>
 </a></li>
 
               </ul>

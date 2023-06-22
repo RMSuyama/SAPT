@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../pages/Login.css';
 
 import firebase from '../../config/firebase';
@@ -8,6 +8,7 @@ function Login() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
+  const [mensagem, setMensagem] = useState('');
 
   function LoginUsuario() {
     firebase
@@ -15,11 +16,12 @@ function Login() {
       .signInWithEmailAndPassword(email, senha)
       .then(function (firebaseUser) {
         setLoggedIn(true);
+        setMensagem('Login bem-sucedido');
         // sucesso
         window.location.href = '/home'; // Redireciona para a rota /home
       })
       .catch(function (error) {
-        alert(error);
+        setMensagem(`Erro ao fazer login: ${error.message}`);
         // erro
       });
   }
@@ -32,48 +34,36 @@ function Login() {
     setSenha(event.target.value);
   }
 
+  useEffect(() => {
+    if (mensagem) {
+      const timeout = setTimeout(() => {
+        setMensagem('');
+      }, 2500);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [mensagem]);
+
   return (
     <div className="cardLog text-center">
-      <div className="SPRT">SPRT - Sistema Planejamento e Recuperação Tributária</div>      
-      <div className="cardLog-header">
-        <ul className="nav nav-tabs card-header-tabs">
-          <li className="nav-item">
-            <a className="nav-link active" aria-current="true" href="#">
-              Login
-            </a>
-          </li>
+      <div className='card'>
+        <div className="SPRT">SPRT - Sistema Planejamento e Recuperação Tributária</div>
+      </div>      
+      <div className='card'>
+        <form>
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
+            <input onChange={alterarEmail} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
+            <div id="emailHelp" className="form-text">Nunca compartilhe sua senha.</div>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+            <input onChange={alterarSenha} type="password" className="form-control" id="exampleInputPassword1"></input>
+          </div>
 
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Novo Cadastro
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Esqueci a senha
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div className="cardLog-body">
-        <input
-          onChange={alterarEmail}
-          className="form-control me-2"
-          type="email"
-          placeholder="E-mail"
-          aria-label="E-mail"
-        />
-        <input
-          onChange={alterarSenha}
-          className="form-control me-2"
-          type="password"
-          placeholder="Senha"
-          aria-label="Senha"
-        />
-        <button className="btn btn-outline-success" type="submit" onClick={LoginUsuario}>
-          Acessar
-        </button>
+          <button type="button" className="btn btn-dark" onClick={LoginUsuario}>Entrar</button>
+          {mensagem && <div className="alerta" class="alert alert-dark" role="alert">{mensagem}</div>}
+        </form>
       </div>
     </div>
   );
